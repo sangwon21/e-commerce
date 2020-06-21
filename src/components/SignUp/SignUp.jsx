@@ -67,7 +67,7 @@ class SignUp extends Component {
           />
           <FormInput
             type="email"
-            name="eamil"
+            name="email"
             value={email}
             onChange={this.handleChange}
             label="Email"
@@ -89,8 +89,8 @@ class SignUp extends Component {
             label="Confirm Password"
             required
           />
+          <CustomButton type="submit">SIGN UP</CustomButton>
         </form>
-        <CustomButton type="submit">SIGN UP</CustomButton>
       </div>
     );
   }
