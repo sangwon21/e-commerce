@@ -8,7 +8,6 @@ import ShopPage from "./pages/Shop/Shop";
 import SignInAndSignUpPage from "./pages/SignInAndSignUp/SignInAndSignUp";
 import CheckoutPage from "./pages/Checkout/Checkout";
 import Header from "./components/Header/Header";
-import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 import { setCurrentUser } from "./redux/user/user.actions";
 import { selectCurrentUser } from "./redux/user/user.selectors";
 
@@ -64,8 +63,4 @@ const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  setCurrentUser: (user) => dispatch(setCurrentUser(user)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps)(App);
